@@ -1,4 +1,4 @@
-@regression
+
   Feature: Validate Accounts page data
     As a CSR user, I want to validate data rows in Accounts page
 
