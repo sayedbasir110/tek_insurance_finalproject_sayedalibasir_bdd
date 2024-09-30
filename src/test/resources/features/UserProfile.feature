@@ -1,4 +1,4 @@
-
+@smoke
 Feature: CSR portal profile and logout validation
   As a CSR user, I want to ensure CSR profile information is correct and I can logout successfully.
 

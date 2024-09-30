@@ -1,4 +1,4 @@
-
+@smoke
   Feature: Validate Plans page data
     As a CSR user, I want to validate data rows in Plans page
 
