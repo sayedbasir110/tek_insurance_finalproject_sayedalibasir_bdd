@@ -11,7 +11,8 @@ import org.junit.runner.RunWith;
         dryRun =  false,
         tags = "@smoke",
         plugin = {
-                "html:target/cucumber_report/index.html"
+                "html:target/cucumber_report/index.html",
+                "json:target/json_report/cucumber-report"
         }
 )
 public class TestRunner {
