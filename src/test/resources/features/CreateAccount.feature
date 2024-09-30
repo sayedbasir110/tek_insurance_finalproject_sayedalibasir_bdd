@@ -18,7 +18,7 @@ Feature: User Account Creation Workflow
     And user selects "Male" from "Gender" dropdown
     And user selects "Single" from "Marital Status" dropdown
     And user enters "Self Employment" in "Employment Status" field
-    And user enters "1996-02-01" in "Date Of Birth" field
+    And user enters "001996-02-01" in "Date Of Birth" field
     And user clicks on "Create Account" button
     Then user should be navigated to sign-up page
     And email address should match the provided email
@@ -37,8 +37,8 @@ Feature: User Account Creation Workflow
     Then user should see error "<error>"
     Examples:
       | email              | dateOfBirth | error                                           |
-      | john.doe@gmail.com | 1996-02-01  | Account with email john.doe@gmail.com is exist  |
-      | random email       | 2010-02-01  | you must be 18 years or older to create account |
+      | john.doe@gmail.com | 001996-02-01  | Account with email john.doe@gmail.com is exist  |
+      | random email       | 002010-02-01  | you must be 18 years or older to create account |
 
     @CreateNewAccount_UserStory5
     Scenario: Create new account, sign in and validate profile name
@@ -49,7 +49,7 @@ Feature: User Account Creation Workflow
       And user selects "Male" from "Gender" dropdown
       And user selects "Single" from "Marital Status" dropdown
       And user enters "Self Employment" in "Employment Status" field
-      And user enters "1996-02-01" in "Date Of Birth" field
+      And user enters "001996-02-01" in "Date Of Birth" field
       And user clicks on "Create Account" button
       Then user should be navigated to sign-up page
       When user enters "random userName" in "Username" field

@@ -7,6 +7,8 @@ import tek_insurance.bdd.utility.RandomEmail;
 import tek_insurance.bdd.utility.RandomUserName;
 import tek_insurance.bdd.utility.SeleniumUtility;
 
+import java.text.SimpleDateFormat;
+
 
 public class CommonSteps extends SeleniumUtility {
     static String emailToUse;
