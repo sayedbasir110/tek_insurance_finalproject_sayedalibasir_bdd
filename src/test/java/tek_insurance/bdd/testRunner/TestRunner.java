@@ -12,7 +12,7 @@ import org.junit.runner.RunWith;
         tags = "@smoke",
         plugin = {
                 "html:target/cucumber_report/index.html",
-                "json:target/json_report/cucumber-report"
+                "json:target/json_report/cucumber-report.json"
         }
 )
 public class TestRunner {
