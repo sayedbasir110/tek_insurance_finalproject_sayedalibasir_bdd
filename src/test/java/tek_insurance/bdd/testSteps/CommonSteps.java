@@ -25,9 +25,6 @@ public class CommonSteps extends SeleniumUtility {
         else if (value.equalsIgnoreCase("random userName")) {
             userNameToUse = RandomUserName.generateRandomUserName();
             sendTextToElement(By.xpath(fieldXpath),userNameToUse);
-        } else if (value.matches("\\d{4}-\\d{2}-\\d{2}")) {
-            String formatedDate = HelperMethods.formatedDate(value);
-            sendTextToElement(By.xpath(fieldXpath),formatedDate);
         } else if (value.equalsIgnoreCase("username")) {
             sendTextToElement(By.xpath(fieldXpath),userNameToUse);
         } else sendTextToElement(By.xpath(fieldXpath), value);
