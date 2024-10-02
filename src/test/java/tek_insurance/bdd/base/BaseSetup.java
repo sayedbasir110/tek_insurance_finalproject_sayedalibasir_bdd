@@ -21,7 +21,7 @@ public abstract class BaseSetup {
     protected final int waitTimeInSeconds = 25;
     public BaseSetup(){
         try{
-            String configFilePath = System.getProperty("user.dir") + "/src/test/resources/configs/dev-config.properties";
+            String configFilePath = getConfigFilePath();
             LOGGER.info("Reading config file from {}", configFilePath);
             File file = new File(configFilePath);
             FileInputStream fileInputStream = new FileInputStream(file);
@@ -31,6 +31,12 @@ public abstract class BaseSetup {
         catch (IOException ex){
             throw new RuntimeException("\"Something wrong with Config file", ex);
         }
+    }
+    private String getConfigFilePath(){
+        String configFilePath = System.getProperty("user.dir") + "/src/test/resources/configs/{env}-config.properties";
+        String env = System.getProperty("env");
+        if (env == null) return configFilePath.replace("{env}", "dev");
+        return configFilePath.replace("{env}", env);
     }
     // method to open the browser
     public void openBrowser(){

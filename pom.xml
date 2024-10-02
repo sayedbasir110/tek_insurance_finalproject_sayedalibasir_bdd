@@ -14,19 +14,20 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
     <dependencies>
-        <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
+        <!-- selenium-java dependency -->
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-java</artifactId>
-            <version>4.24.0</version>
+            <version>4.25.0</version>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-java -->
+
+        <!-- cucumber dependency -->
         <dependency>
             <groupId>io.cucumber</groupId>
             <artifactId>cucumber-java</artifactId>
             <version>7.18.1</version>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-junit -->
+        <!-- cucumber-Junit dependency -->
         <dependency>
             <groupId>io.cucumber</groupId>
             <artifactId>cucumber-junit</artifactId>
